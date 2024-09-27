@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+</head>
+<body>
+  <main>
+    
+    <section class="hero-section image-property" id="home">
+      <nav>
+        <div class="logo">
+          <a href="#"><img class="business-logo" src="./images/logo.svg" alt="business logo"></a>
+        </div>
+        <div class="hamburger"><img onclick="openNav()" id class="ham-nav" src="./images/icon-hamburger.svg" alt=""></div>
+        <div class="top-nav">          
+          <div class="btm-nav">
+            <a href="#home">A<span>bou</span>t</a>
+            <a href="#interact">C<span>areer</span>s</a>
+            <a href="#create">E<span>vent</span>s</a>
+            <a href="#create">P<span>roduct</span>s</a>
+            <a href="#footer">S<span>uppor</span>t</a>
+          </div>
+        </div>
+        <div class="menu" id="menu"><a class="closebtn" href="#" onclick="closeNav()"><img src="./images/icon-close.svg" alt="" id="close-menu"></a></div>
+        <div id="myNav" class="overlay">
+          <div class="overlay-content">
+            <a href="#home">A<span>bou</span>t</a>
+            <a href="#interact">C<span>areer</span>s</a>
+            <a href="#create">E<span>vent</span>s</a>
+            <a href="#create">P<span>roduct</span>s</a>
+            <a href="#footer">S<span>uppor</span>t</a>
+          </div>
+        </div>
+      </nav>
+      <div class="hero-text">
+        <h1>Immersive experiences that deliver</h1>
+      </div>
+    </section>
+
+    <section class="interactive" id="interact">      
+      <div class="interactive-image image-property"></div>
+      <div class="info">
+        <h2 class="info-header"> The leader in interactive VR</h2>
+        <p class="info-notes">
+          Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.
+        </p>
+      </div>      
+    </section>
+
+    <section class="creations" id="create">
+      <div class="create-link">
+        <h2 class="create-header">Our creations</h2>        
+      </div>
+      <div class="create-btn"><button class="see-all">See all</button></div>
+      <div class="create-photos">
+        <div class="one image-property creations-text">Deep<br>earth</div>
+        <div class="two image-property creations-text">Night<br>arcade</div>
+        <div class="three image-property creations-text">Soccer<br>team VR</div>
+        <div class="four image-property creations-text">The<br>grid</div>
+        <div class="five image-property creations-text">From up<br>above VR</div>
+        <div class="six image-property creations-text">Pocket<br>borealis</div>
+        <div class="seven image-property creations-text">The<br>curiosity</div>
+        <div class="eight image-property creations-text">Make it<br>fisheye</div>
+      </div>
+    </section>
+
+    <section class="page-footer" id="footer">
+      <footer>
+        <div class="logo">
+          <a href=""><img class="business-logo footer-logo" src="./images/logo.svg" alt="business logo"></a>
+        </div>
+        <div class="socials">
+          <a href="#"><img class="social-icons" src="./images/icon-facebook.svg" alt="facebook icon"></a>
+          <a href="#"><img class="social-icons" src="./images/icon-twitter.svg" alt="teitter icon"></a>
+          <a href="#"><img class="social-icons" src="./images/icon-pinterest.svg" alt="pinterest icon"></a>
+          <a href="#"><img class="social-icons" src="./images/icon-instagram.svg" alt="instagram icon"></a>
+        </div>
+        <div class="my-nav">          
+          <div class="btm-nav">
+            <a href="#home">A<span>bou</span>t</a>
+            <a href="#interact">C<span>areer</span>s</a>
+            <a href="#create">E<span>vent</span>s</a>
+            <a href="#create">P<span>roduct</span>s</a>
+            <a href="#footer">S<span>uppor</span>t</a>
+          </div>
+        </div>
+        <div class="trademark">
+          <p>© 2021 Loopstudios. All rights reserved.</p>
+        </div>          
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="#">Khalagai</a>.
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="./index.js"></script>
+
+</body>
+</html>

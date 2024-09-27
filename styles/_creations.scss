@@ -1,0 +1,327 @@
+@use "colors";
+
+.image-property {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.creations {
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 2rem;
+    width: 100%;
+
+    .create-link {
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+
+        
+        .create-header {
+            font-family: colors.$primary-font;
+            text-transform: uppercase;
+            font-size: clamp(28px, 6vw, 45px); 
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    .create-photos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 1rem;
+        height: 200vh;
+        padding-top: 0;
+        grid-column: 1;
+        grid-row: 2; 
+        padding-bottom: 2rem;
+        
+        .one {
+            background-image: url("../images/mobile/image-deep-earth.jpg");
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row: 1;
+            
+        }
+        .two {
+            background-image: url("../images/mobile/image-night-arcade.jpg");
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row: 2;
+            
+        }
+        .three {
+            background-image: url("../images/mobile/image-soccer-team.jpg");
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row: 3;
+            
+        }
+        .four {
+            background-image: url("../images/mobile/image-grid.jpg");
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row: 4;
+            
+        }
+        .five {
+            background-image: url("../images/mobile/image-from-above.jpg");
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row: 5;
+            
+        }
+        .six {
+            background-image: url("../images/mobile/image-pocket-borealis.jpg");
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row: 6;
+            
+        }
+        .seven {
+            background-image: url("../images/mobile/image-curiosity.jpg");
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row: 7;
+            
+        }
+        .eight {
+            background-image: url("../images/mobile/image-fisheye.jpg");
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row: 8;        
+        }
+
+        .creations-text {
+            color: colors.$text-color;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            text-transform: uppercase;
+            font-family: colors.$primary-font;
+            font-weight: 300;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+            
+        }
+    }
+
+    .create-btn {
+        grid-column: 1;
+        grid-row: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        .see-all {
+            width: 8rem;
+            border: 2px solid colors.$button-border-color;
+            background-color: colors.$button-color;
+            text-transform: uppercase;
+            font-family: colors.$primary-font;
+            font-weight: 400;
+            cursor: pointer;
+            height: 2.3rem;
+        
+            &:hover {
+                background-color: colors.$button-hover-color;
+                color: colors.$button-hover-text-color;
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 450px) {
+
+    .creations {
+
+        .create-link {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+        }        
+        .create-btn {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+        }
+        
+        .create-photos {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row: 2;
+
+            .creations-text {
+                font-size: 1.4rem;
+            }
+
+            .one {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 4;        
+            }
+            .two {
+                grid-column-start: 3;
+                grid-column-end: 5;
+                grid-row-start: 1;
+                grid-row-end: 4;        
+            }
+            .three {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 4;
+                grid-row-end: 7;        
+            }
+            .four {
+                grid-column-start: 3;
+                grid-column-end: 5;
+                grid-row-start: 4;
+                grid-row-end: 7;        
+            }
+            .five {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 7;
+                grid-row-end: 10;        
+            }
+            .six {
+                grid-column-start: 3;
+                grid-column-end: 5;
+                grid-row-start: 7;
+                grid-row-end: 10;        
+            }
+            .seven {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 10;
+                grid-row-end: 13;        
+            }
+            .eight {
+                grid-column-start: 3;
+                grid-column-end: 5;
+                grid-row-start: 10;
+                grid-row-end: 13;        
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+
+    .image-property {
+        background-position: center;
+    }
+
+    .creations {
+        padding-top: 5rem; 
+        width: 100%;
+        padding-bottom: 5rem;
+
+        .create-link {
+            grid-column: 1;
+            grid-row: 1; 
+            padding-top: 0.2rem;
+             
+            
+            .create-header {
+                justify-content: flex-start;
+            }
+        }
+        
+        .create-btn {
+            grid-column: 2;
+            grid-row: 1;
+            justify-content: flex-end;
+        }
+
+        .create-photos {
+            height: 150vh;
+            padding-top: 3rem;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row: 2;
+
+    
+        .one {
+            background-image: url("../images/desktop/image-deep-earth.jpg");
+            grid-column: 1;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            
+        }
+        .two {
+            background-image: url("../images/desktop/image-night-arcade.jpg");
+            grid-column: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            
+        }
+        .three {
+            background-image: url("../images/desktop/image-soccer-team.jpg");
+            grid-column: 3;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            
+        }
+        .four {
+            background-image: url("../images/desktop/image-grid.jpg");
+            grid-column: 4;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            
+        }
+        .five {
+            background-image: url("../images/desktop/image-from-above.jpg");
+            grid-column: 1;
+            grid-row-start: 4;
+            grid-row-end: 7;
+            
+        }
+        .six {
+            background-image: url("../images/desktop/image-pocket-borealis.jpg");
+            grid-column: 2;
+            grid-row-start: 4;
+            grid-row-end: 7;
+            
+        }
+        .seven {
+            background-image: url("../images/desktop/image-curiosity.jpg");
+            grid-column: 3;
+            grid-row-start: 4;
+            grid-row-end: 7;
+            
+        }
+        .eight {
+            background-image: url("../images/desktop/image-fisheye.jpg");
+            grid-column: 4;
+            grid-row-start: 4;
+            grid-row-end: 7;            
+        }
+    }
+}    
+}
+
+@media (min-width: 970px) {
+    .creations {
+        padding-left: 8rem;
+        padding-right: 8rem;
+
+        .create-photos .creations-text {
+            font-size: 2rem;
+        }
+    }
+}

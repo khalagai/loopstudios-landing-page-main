@@ -1,0 +1,162 @@
+
+@use "colors";
+
+
+.page-footer {
+    width: 100%;
+    background-color: colors.$footer-color;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    footer {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        padding-top: 2rem;
+        gap: 2rem;
+    
+        .logo {
+            grid-column: 1;
+            grid-row: 1;
+            display: flex;
+            justify-content: center;
+    
+            .footer-logo {
+                height: 1.5rem;
+            }
+        }
+    
+        .socials {
+            grid-column: 1;
+            grid-row: 3;
+            display: flex;
+            justify-content: center;
+            height: 2rem;
+            gap: 0.8rem;
+    
+            .social-icons {
+                height: 1.5rem;
+            }
+    
+            a {
+                text-decoration: none;
+                color: colors.$text-color;
+    
+                &:hover {
+                    padding-bottom: 0;
+                    text-decoration: underline;
+                    border-bottom: 2px solid colors.$text-color;
+                    transform: scale(1.1);
+                }
+            }   
+        }
+    
+        .my-nav {
+            grid-column: 1;
+            grid-row: 2;
+            display: flex;
+            justify-content: center;
+    
+            .btm-nav {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                
+                a {
+                    font-size: 1rem;
+                    padding-bottom: 1rem;
+                    text-align: center;
+                    text-decoration: none;
+                    color: colors.$text-color;
+    
+                    &:hover {
+                        color: hsl(0, 0%, 55%);
+                    }
+    
+                    &:focus {
+                        color: hsl(0, 0%, 55%);
+                    }
+    
+                    span:hover {
+                        padding-bottom: 3px;
+                        border-bottom: 3px solid colors.$text-color;
+                        transform: scale(1.1);
+                      }
+                }
+            }
+        
+        }
+    
+        .trademark {
+            grid-column: 1;
+            grid-row: 4;
+            color: colors.$text-color;
+            display: flex;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+    
+        .attribution {
+            grid-column: 1;
+            grid-row: 5;
+            font-size: 11px; text-align: center;
+    
+            a { 
+                color: colors.$attribution-color; 
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 970px) {
+
+    .page-footer {
+        padding-left: 8rem;
+        padding-right: 8rem;
+
+        footer {
+
+            .logo {
+                grid-column: 1;
+                grid-row: 1;
+                justify-content: flex-start;
+            }
+
+            .socials {
+                grid-column: 2;
+                grid-row: 1;
+                justify-content: flex-end;
+            }
+
+            .my-nav {
+                grid-column: 1;
+                grid-row: 2;
+
+                .btm-nav {
+                    flex-direction: row;
+                    justify-content: flex-start;
+
+                    a {
+                        padding-right: 1rem;
+                    }
+                }
+            }
+
+            .trademark {
+                grid-column: 2;
+                grid-row: 2;
+                justify-content: flex-end;
+                font-size: 1rem;
+            }
+
+            .attribution {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row: 3;
+            }
+        }
+    }
+    
+}
