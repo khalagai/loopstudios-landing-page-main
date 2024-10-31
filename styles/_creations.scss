@@ -1,5 +1,16 @@
 @use "colors";
 
+$images: (
+    "one": "deep-earth",
+    "two": "night-arcade",
+    "three": "soccer-team",
+    "four": "grid",
+    "five": "from-above",
+    "six": "pocket-borealis",
+    "seven": "curiosity",
+    "eight": "fisheye"
+);
+
 .image-property {
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +49,7 @@
 
     .create-photos {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 1rem;
         height: 200vh;
@@ -47,60 +58,10 @@
         grid-row: 2; 
         padding-bottom: 2rem;
         
-        .one {
-            background-image: url("../images/mobile/image-deep-earth.jpg");
-            grid-column-start: 1;
-            grid-column-end: 5;
-            grid-row: 1;
-            
-        }
-        .two {
-            background-image: url("../images/mobile/image-night-arcade.jpg");
-            grid-column-start: 1;
-            grid-column-end: 5;
-            grid-row: 2;
-            
-        }
-        .three {
-            background-image: url("../images/mobile/image-soccer-team.jpg");
-            grid-column-start: 1;
-            grid-column-end: 5;
-            grid-row: 3;
-            
-        }
-        .four {
-            background-image: url("../images/mobile/image-grid.jpg");
-            grid-column-start: 1;
-            grid-column-end: 5;
-            grid-row: 4;
-            
-        }
-        .five {
-            background-image: url("../images/mobile/image-from-above.jpg");
-            grid-column-start: 1;
-            grid-column-end: 5;
-            grid-row: 5;
-            
-        }
-        .six {
-            background-image: url("../images/mobile/image-pocket-borealis.jpg");
-            grid-column-start: 1;
-            grid-column-end: 5;
-            grid-row: 6;
-            
-        }
-        .seven {
-            background-image: url("../images/mobile/image-curiosity.jpg");
-            grid-column-start: 1;
-            grid-column-end: 5;
-            grid-row: 7;
-            
-        }
-        .eight {
-            background-image: url("../images/mobile/image-fisheye.jpg");
-            grid-column-start: 1;
-            grid-column-end: 5;
-            grid-row: 8;        
+        @each $class, $name in $images {
+            .#{$class} {
+                background-image: url("../images/mobile/image-#{$name}.jpg");
+            }
         }
 
         .creations-text {
@@ -168,53 +129,12 @@
                 font-size: 1.4rem;
             }
 
-            .one {
-                grid-column-start: 1;
-                grid-column-end: 3;
-                grid-row-start: 1;
-                grid-row-end: 4;        
-            }
-            .two {
-                grid-column-start: 3;
-                grid-column-end: 5;
-                grid-row-start: 1;
-                grid-row-end: 4;        
-            }
-            .three {
-                grid-column-start: 1;
-                grid-column-end: 3;
-                grid-row-start: 4;
-                grid-row-end: 7;        
-            }
-            .four {
-                grid-column-start: 3;
-                grid-column-end: 5;
-                grid-row-start: 4;
-                grid-row-end: 7;        
-            }
-            .five {
-                grid-column-start: 1;
-                grid-column-end: 3;
-                grid-row-start: 7;
-                grid-row-end: 10;        
-            }
-            .six {
-                grid-column-start: 3;
-                grid-column-end: 5;
-                grid-row-start: 7;
-                grid-row-end: 10;        
-            }
-            .seven {
-                grid-column-start: 1;
-                grid-column-end: 3;
-                grid-row-start: 10;
-                grid-row-end: 13;        
-            }
-            .eight {
-                grid-column-start: 3;
-                grid-column-end: 5;
-                grid-row-start: 10;
-                grid-row-end: 13;        
+            grid-template-columns: repeat(2, 1fr);
+            
+            @each $class, $name in $images {
+                .#{$class} {
+                    background-image: url("../images/desktop/image-#{$name}.jpg");
+                }
             }
         }
     }
@@ -255,64 +175,9 @@
             grid-column-end: 3;
             grid-row: 2;
 
-    
-        .one {
-            background-image: url("../images/desktop/image-deep-earth.jpg");
-            grid-column: 1;
-            grid-row-start: 1;
-            grid-row-end: 4;
-            
+            grid-template-columns: repeat(4, 1fr);
         }
-        .two {
-            background-image: url("../images/desktop/image-night-arcade.jpg");
-            grid-column: 2;
-            grid-row-start: 1;
-            grid-row-end: 4;
-            
-        }
-        .three {
-            background-image: url("../images/desktop/image-soccer-team.jpg");
-            grid-column: 3;
-            grid-row-start: 1;
-            grid-row-end: 4;
-            
-        }
-        .four {
-            background-image: url("../images/desktop/image-grid.jpg");
-            grid-column: 4;
-            grid-row-start: 1;
-            grid-row-end: 4;
-            
-        }
-        .five {
-            background-image: url("../images/desktop/image-from-above.jpg");
-            grid-column: 1;
-            grid-row-start: 4;
-            grid-row-end: 7;
-            
-        }
-        .six {
-            background-image: url("../images/desktop/image-pocket-borealis.jpg");
-            grid-column: 2;
-            grid-row-start: 4;
-            grid-row-end: 7;
-            
-        }
-        .seven {
-            background-image: url("../images/desktop/image-curiosity.jpg");
-            grid-column: 3;
-            grid-row-start: 4;
-            grid-row-end: 7;
-            
-        }
-        .eight {
-            background-image: url("../images/desktop/image-fisheye.jpg");
-            grid-column: 4;
-            grid-row-start: 4;
-            grid-row-end: 7;            
-        }
-    }
-}    
+    }    
 }
 
 @media (min-width: 970px) {

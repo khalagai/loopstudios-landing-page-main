@@ -289,7 +289,7 @@
 }
 .creations .create-photos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   gap: 1rem;
   height: 200vh;
@@ -300,51 +300,27 @@
 }
 .creations .create-photos .one {
   background-image: url("../images/mobile/image-deep-earth.jpg");
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row: 1;
 }
 .creations .create-photos .two {
   background-image: url("../images/mobile/image-night-arcade.jpg");
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row: 2;
 }
 .creations .create-photos .three {
   background-image: url("../images/mobile/image-soccer-team.jpg");
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row: 3;
 }
 .creations .create-photos .four {
   background-image: url("../images/mobile/image-grid.jpg");
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row: 4;
 }
 .creations .create-photos .five {
   background-image: url("../images/mobile/image-from-above.jpg");
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row: 5;
 }
 .creations .create-photos .six {
   background-image: url("../images/mobile/image-pocket-borealis.jpg");
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row: 6;
 }
 .creations .create-photos .seven {
   background-image: url("../images/mobile/image-curiosity.jpg");
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row: 7;
 }
 .creations .create-photos .eight {
   background-image: url("../images/mobile/image-fisheye.jpg");
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row: 8;
 }
 .creations .create-photos .creations-text {
   color: hsl(0, 0%, 100%);
@@ -393,57 +369,34 @@
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
   .creations .create-photos .creations-text {
     font-size: 1.4rem;
   }
   .creations .create-photos .one {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 4;
+    background-image: url("../images/desktop/image-deep-earth.jpg");
   }
   .creations .create-photos .two {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 4;
+    background-image: url("../images/desktop/image-night-arcade.jpg");
   }
   .creations .create-photos .three {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 7;
+    background-image: url("../images/desktop/image-soccer-team.jpg");
   }
   .creations .create-photos .four {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 7;
+    background-image: url("../images/desktop/image-grid.jpg");
   }
   .creations .create-photos .five {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 7;
-    grid-row-end: 10;
+    background-image: url("../images/desktop/image-from-above.jpg");
   }
   .creations .create-photos .six {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 7;
-    grid-row-end: 10;
+    background-image: url("../images/desktop/image-pocket-borealis.jpg");
   }
   .creations .create-photos .seven {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 10;
-    grid-row-end: 13;
+    background-image: url("../images/desktop/image-curiosity.jpg");
   }
   .creations .create-photos .eight {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 10;
-    grid-row-end: 13;
+    background-image: url("../images/desktop/image-fisheye.jpg");
   }
 }
 @media (min-width: 600px) {
@@ -474,54 +427,7 @@
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row: 2;
-  }
-  .creations .create-photos .one {
-    background-image: url("../images/desktop/image-deep-earth.jpg");
-    grid-column: 1;
-    grid-row-start: 1;
-    grid-row-end: 4;
-  }
-  .creations .create-photos .two {
-    background-image: url("../images/desktop/image-night-arcade.jpg");
-    grid-column: 2;
-    grid-row-start: 1;
-    grid-row-end: 4;
-  }
-  .creations .create-photos .three {
-    background-image: url("../images/desktop/image-soccer-team.jpg");
-    grid-column: 3;
-    grid-row-start: 1;
-    grid-row-end: 4;
-  }
-  .creations .create-photos .four {
-    background-image: url("../images/desktop/image-grid.jpg");
-    grid-column: 4;
-    grid-row-start: 1;
-    grid-row-end: 4;
-  }
-  .creations .create-photos .five {
-    background-image: url("../images/desktop/image-from-above.jpg");
-    grid-column: 1;
-    grid-row-start: 4;
-    grid-row-end: 7;
-  }
-  .creations .create-photos .six {
-    background-image: url("../images/desktop/image-pocket-borealis.jpg");
-    grid-column: 2;
-    grid-row-start: 4;
-    grid-row-end: 7;
-  }
-  .creations .create-photos .seven {
-    background-image: url("../images/desktop/image-curiosity.jpg");
-    grid-column: 3;
-    grid-row-start: 4;
-    grid-row-end: 7;
-  }
-  .creations .create-photos .eight {
-    background-image: url("../images/desktop/image-fisheye.jpg");
-    grid-column: 4;
-    grid-row-start: 4;
-    grid-row-end: 7;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (min-width: 970px) {
@@ -676,4 +582,6 @@ main {
   justify-content: center;
   gap: 1rem;
   min-width: 100px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
